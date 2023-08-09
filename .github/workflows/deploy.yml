@@ -24,7 +24,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Output information
-        run: echo "Cache used? ${{ steps.cached-deps-outputs.used-cache }}"
+        run: echo "Cache used? ${{ steps.cached-deps.outputs.used-cache }}"
       - name: Lint code
         run: npm run lint
   test:
